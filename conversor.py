@@ -1,13 +1,9 @@
 layers = iface.mapCanvas().layers()
-#print(layers)
 
-diretorio = 'C:/Users/lpzam/Desktop/Conversor_CRS/Convertidos'
-crs = QgsCoordinateReferenceSystem("EPSG:31985")
-
-contador = 1
+epsg = 'EPSG:31982'
+crs = QgsCoordinateReferenceSystem(epsg)
+fn = 'C:/Seu/Diretorio/'
 
 for layer in layers:
-	#print(layer.name())
-	diretorio_final = diretorio + '/' + layer.name() + '_' + str(contador)
-	convertidos = QgsVectorFileWriter.writeAsVectorFormat(layer, diretorio_final, 'utf-8', crs, driverName="ESRI Shapefile")
-	contador += 1
+    fn_atual = fn + str(layer.name())
+    _writer = QgsVectorFileWriter.writeAsVectorFormat(layer, fn_atual, "utf-8", crs, driverName="ESRI Shapefile")
