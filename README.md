@@ -1,6 +1,6 @@
 # Conversor de sistema de coordenadas
 
-## Exporta e converte o sistema de coordenadas de camadas vetoriais
+## Exporta e converte camadas vetoriais para um novo sistema de coordenadas
 
 ### Modo de usar
 
